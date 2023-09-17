@@ -1,0 +1,3 @@
+operating system: any
+screen resolution: any
+IDE: PyCharm
