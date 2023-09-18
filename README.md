@@ -7,4 +7,4 @@ The package includes two functions: 'calculate_shortest_path' and 'solve_paths'.
 'solve_paths' takes in a distance matrix and returns the shortest paths for all pairs.
 
 
-The tests file is included in the package with three test cases.
+The tests file is included in the package with five test cases.
