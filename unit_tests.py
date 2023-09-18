@@ -42,6 +42,20 @@ class Test(unittest.TestCase):
         self.assertEqual(solve_paths(test), expected)
 
     def test_two(self):
+        test = [[0, no_path, 1, no_path],
+                [4, 0, no_path, no_path],
+                [no_path, 2, 0, no_path],
+                [no_path, 3, no_path, 0]]
+
+        expected = [[0, 3, 1, no_path],
+                    [4, 0, no_path, no_path],
+                    [6, 2, 0, no_path],
+                    [7, 3, no_path, 0]]
+
+        result = solve_paths(test)
+        self.assertEqual(solve_paths(test), expected)
+
+    def test_three(self):
         test = [[0, 6, 2, no_path],
                 [no_path, 0, no_path, 2],
                 [no_path, no_path, 0, 6],
@@ -55,7 +69,7 @@ class Test(unittest.TestCase):
         result = solve_paths(test)
         self.assertEqual(solve_paths(test), expected)
 
-    def test_three(self):
+    def test_four(self):
         test = [[0, 6, 2, 8],
                 [2, 0, no_path, no_path],
                 [5, 3, 0, 8],
@@ -65,6 +79,20 @@ class Test(unittest.TestCase):
                     [2, 0, no_path, no_path],
                     [5, 3, 0, 8],
                     [4, 2, no_path, 0]]
+
+        result = solve_paths(test)
+        self.assertEqual(solve_paths(test), expected)
+
+    def test_five(self):
+        test = [[0, no_path, 2, -1],
+                [4, 0, 3, no_path],
+                [no_path, no_path, 0, 2],
+                [no_path, -1, no_path, 0]]
+
+        expected = [[0, -2, 1, -1],
+                    [4, 0, 3, 5],
+                    [5, 1, 0, 2],
+                    [3, -1, 2, 0]]
 
         result = solve_paths(test)
         self.assertEqual(solve_paths(test), expected)
